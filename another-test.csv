@@ -1,0 +1,341 @@
+Código INE;Nombre;Provincia;Departamento;Poblacion 2022
+10101;Sucre;Samuel Oropeza; Chuquisaca;360.544
+10102;Yotala;Samuel Oropeza; Chuquisaca;9.081
+10103;Poroma;Samuel Oropeza; Chuquisaca;15.777
+10201;Azurduy;Juana Azurduy de Padilla; Chuquisaca;11.166
+10202;Tarvita;Juana Azurduy de Padilla; Chuquisaca;13.876
+10301;Villa Zudáñez;Jaime Zudáñez; Chuquisaca;7.640
+10302;Presto;Jaime Zudáñez; Chuquisaca;10.042
+10303;Villa Mojocoya;Jaime Zudáñez; Chuquisaca;7.805
+10304;Icla;Jaime Zudáñez; Chuquisaca;8.026
+10401;Padilla;Tomina; Chuquisaca;10.212
+10402;Tomina;Tomina; Chuquisaca;9.006
+10403;Sopachuy;Tomina; Chuquisaca;6.067
+10404;Villa Alcalá;Tomina; Chuquisaca;2.632
+10405;El Villar;Tomina; Chuquisaca;3.994
+10501;Monteagudo;Hernando Siles; Chuquisaca;25.120
+10502;Huacareta;Hernando Siles; Chuquisaca;8.244
+10601;Tarabuco;Yamparáez; Chuquisaca;15.342
+10602;Yamparáez;Yamparáez; Chuquisaca;8.486
+10701;Camargo;Nor Cinti; Chuquisaca;15.522
+10702;San Lucas;Nor Cinti; Chuquisaca;31.389
+10703;Incahuasi;Nor Cinti; Chuquisaca;12.587
+10704;Villa Charcas;Nor Cinti; Chuquisaca;15.592
+10801;Villa Serrano;Belisario Boeto; Chuquisaca;10.227
+10901;Villa Abecia;Sud Cinti; Chuquisaca;3.298
+10902;Culpina;Sud Cinti; Chuquisaca;17.303
+10903;Las Carreras;Sud Cinti; Chuquisaca;3.058
+11001;Villa Vaca Guzmán (Muyupampa);Luis Calvo; Chuquisaca;9.448
+11002;Huacaya;Luis Calvo; Chuquisaca;2.498
+11003;Macharetí;Luis Calvo; Chuquisaca;7.137
+20101;La Paz;Pedro Domingo Murillo; La Paz;956.732
+20102;Palca;Pedro Domingo Murillo; La Paz;15.684
+20103;Mecapaca;Pedro Domingo Murillo; La Paz;13.204
+20104;Achocalla;Pedro Domingo Murillo; La Paz;19.995
+20105;El Alto;Pedro Domingo Murillo; La Paz;1.109.048
+20201;Achacachi;Omasuyos; La Paz;35.964
+20202;Ancoraimes;Omasuyos; La Paz;9.451
+20203;Chua Cocani;Omasuyos; La Paz;5.503
+20204;Huarina;Omasuyos; La Paz;7.532
+20205;Santiago de Huata;Omasuyos; La Paz;7.921
+20206;Huatajata;Omasuyos; La Paz;4.579
+20301;Coro Coro;Pacajes; La Paz;9.481
+20302;Caquiaviri;Pacajes; La Paz;10.772
+20303;Calacoto;Pacajes; La Paz;7.904
+20304;Comanche;Pacajes; La Paz;5.413
+20305;Charaña;Pacajes; La Paz;4.735
+20306;Waldo Ballivián;Pacajes; La Paz;3.007
+20307;Nazacara de Pacajes;Pacajes; La Paz;616
+20308;Callapa;Pacajes; La Paz;6.610
+20401;Puerto Acosta;Eliodoro Camacho; La Paz;10.350
+20402;Mocomoco;Eliodoro Camacho; La Paz;12.658
+20403;Puerto Carabuco;Eliodoro Camacho; La Paz;9.756
+20404;Humanata;Eliodoro Camacho; La Paz;5.929
+20405;Escoma;Eliodoro Camacho; La Paz;7.412
+20501;Chuma;Muñecas; La Paz;9.888
+20502;Ayata;Muñecas; La Paz;8.455
+20503;Aucapata;Muñecas; La Paz;6.737
+20601;Sorata;Larecaja; La Paz;18.043
+20602;Guanay;Larecaja; La Paz;13.711
+20603;Tacacoma;Larecaja; La Paz;8.120
+20604;Quiabaya;Larecaja; La Paz;2.468
+20605;Combaya;Larecaja; La Paz;1.618
+20606;Tipuani;Larecaja; La Paz;8.182
+20607;Mapiri;Larecaja; La Paz;14.741
+20608;Teoponte;Larecaja; La Paz;8.617
+20701;Apolo;Franz Tamayo; La Paz;17.423
+20702;Pelechuco;Franz Tamayo; La Paz;7.444
+20801;Viacha;Ingavi; La Paz;85.172
+20802;Guaqui;Ingavi; La Paz;7.728
+20803;Tiahuanaco;Ingavi; La Paz;9.809
+20804;Desaguadero;Ingavi; La Paz;7.459
+20805;San Andrés de Machaca;Ingavi; La Paz;5.983
+20806;Jesús de Machaca;Ingavi; La Paz;11.926
+20807;Taraco;Ingavi; La Paz;6.502
+20901;Luribay;José Ramón Loayza; La Paz;10.196
+20902;Sapahaqui;José Ramón Loayza; La Paz;10.185
+20903;Yaco;José Ramón Loayza; La Paz;7.679
+20904;Malla;José Ramón Loayza; La Paz;3.075
+20905;Cairoma;José Ramón Loayza; La Paz;9.680
+21001;Inquisivi;Inquisivi; La Paz;12.401
+21002;Quime;Inquisivi; La Paz;8.504
+21003;Cajuata;Inquisivi; La Paz;10.606
+21004;Colquiri;Inquisivi; La Paz;17.202
+21005;Ichoca;Inquisivi; La Paz;6.825
+21006;Licoma Pampa;Inquisivi; La Paz;3.201
+21101;Chulumani;Sud Yungas; La Paz;17.501
+21102;Irupana;Sud Yungas; La Paz;14.906
+21103;Yanacachi;Sud Yungas; La Paz;6.446
+21104;Palos Blancos;Sud Yungas; La Paz;24.074
+21105;La Asunta;Sud Yungas; La Paz;39.616
+21201;Pucarani;Los Andes; La Paz;24.795
+21202;Laja;Los Andes; La Paz;17.670
+21203;Batallas;Los Andes; La Paz;14.892
+21204;Puerto Pérez;Los Andes; La Paz;7.670
+21301;Sica Sica;Aroma; La Paz;20.598
+21302;Umala;Aroma; La Paz;8.585
+21303;Ayo Ayo;Aroma; La Paz;8.359
+21304;Calamarca;Aroma; La Paz;10.836
+21305;Patacamaya;Aroma; La Paz;22.303
+21306;Colquencha;Aroma; La Paz;8.157
+21307;Collana;Aroma; La Paz;3.900
+21401;Coroico;Nor Yungas; La Paz;16.599
+21402;Coripata;Nor Yungas; La Paz;15.679
+21501;Ixiamas;Abel Iturralde; La Paz;9.690
+21502;San Buenaventura;Abel Iturralde; La Paz;9.708
+21601;Charazani;Bautista Saavedra; La Paz;9.267
+21602;Curva;Bautista Saavedra; La Paz;3.351
+21701;Copacabana;Manco Kapac; La Paz;12.575
+21702;San Pedro de Tiquina;Manco Kapac; La Paz;6.099
+21703;Tito Yupanqui;Manco Kapac; La Paz;1.908
+21801;San Pedro de Curahuara;Gualberto Villarroel; La Paz;7.245
+21802;Papel Pampa;Gualberto Villarroel; La Paz;6.437
+21803;Chacarilla;Gualberto Villarroel; La Paz;2.218
+21901;Santiago de Machaca;General José Manuel Pando; La Paz;4.956
+21902;Catacora;General José Manuel Pando; La Paz;1.734
+22001;Caranavi;Caranavi; La Paz;45.500
+22002;Alto Beni;Caranavi; La Paz;8.837
+30101;Cochabamba;Cercado; Cochabamba;856.198
+30201;Aiquile;Campero; Cochabamba;21.190
+30202;Pasorapa;Campero; Cochabamba;2.782
+30203;Omereque;Campero; Cochabamba;4.531
+30301;Independencia;Ayopaya; Cochabamba;22.493
+30302;Morochata;Ayopaya; Cochabamba;10.555
+30303;Cocapata;Ayopaya; Cochabamba;17.644
+30401;Tarata;Esteban Arze; Cochabamba;10.033
+30402;Anzaldo;Esteban Arze; Cochabamba;5.182
+30403;Arbieto;Esteban Arze; Cochabamba;17.914
+30404;Sacabamba;Esteban Arze; Cochabamba;3.166
+30501;Arani;Arani; Cochabamba;9.294
+30502;Vacas;Arani; Cochabamba;8.133
+30601;Arque;Arque; Cochabamba;9.987
+30602;Tacopaya;Arque; Cochabamba;7.522
+30701;Capinota;Capinota; Cochabamba;21.252
+30702;Santiváñez;Capinota; Cochabamba;6.722
+30703;Sicaya;Capinota; Cochabamba;3.895
+30801;Cliza;Germán Jordán; Cochabamba;22.402
+30802;Toco;Germán Jordán; Cochabamba;5.638
+30803;Tolata;Germán Jordán; Cochabamba;5.969
+30901;Quillacollo;Quillacollo; Cochabamba;185.142
+30902;Sipe Sipe;Quillacollo; Cochabamba;48.275
+30903;Tiquipaya;Quillacollo; Cochabamba;64.061
+30904;Vinto;Quillacollo; Cochabamba;60.239
+30905;Colcapirhua;Quillacollo; Cochabamba;52.945
+31001;Sacaba;Chapare; Cochabamba;184.593
+31002;Colomi;Chapare; Cochabamba;21.131
+31003;Villa Tunari;Chapare; Cochabamba;86.437
+31101;Tapacarí;Tapacarí; Cochabamba;22.769
+31201;Totora;José Carrasco; Cochabamba;15.988
+31202;Pojo;José Carrasco; Cochabamba;10.146
+31203;Pocona;José Carrasco; Cochabamba;9.365
+31204;Chimoré;José Carrasco; Cochabamba;25.616
+31205;Puerto Villarroel;José Carrasco; Cochabamba;62.832
+31206;Entre Ríos;José Carrasco; Cochabamba;38.381
+31301;Mizque;Mizque; Cochabamba;28.417
+31302;Vila Vila;Mizque; Cochabamba;4.459
+31303;Alalay;Mizque; Cochabamba;2.499
+31401;Punata;Punata; Cochabamba;46.901
+31402;Villa Rivero;Punata; Cochabamba;7.570
+31403;San Benito;Punata; Cochabamba;10.733
+31404;Tacachi;Punata; Cochabamba;634
+31405;Cuchumuela;Punata; Cochabamba;1.571
+31501;Bolívar;Bolívar; Cochabamba;6.422
+31601;Tiraque;Tiraque; Cochabamba;21.201
+31602;Shinahota;Tiraque; Cochabamba;26.283
+40101;Oruro;Cercado; Oruro;351.802
+40102;Caracollo;Cercado; Oruro;21.177
+40103;El Choro;Cercado; Oruro;3.487
+40104;Paria;Cercado; Oruro;12.010
+40201;Challapata;Eduardo Abaroa; Oruro;33.015
+40202;Quillacas;Eduardo Abaroa; Oruro;3.871
+40301;Corque;Carangas; Oruro;7.704
+40302;Choquecota;Carangas; Oruro;980
+40401;Curahuara de Carangas;Sajama; Oruro;4.252
+40402;Turco;Sajama; Oruro;3.287
+40501;Huachacalla;Litoral de Atacama; Oruro;1.465
+40502;Escara;Litoral de Atacama; Oruro;1.375
+40503;Cruz de Machacamarca;Litoral de Atacama; Oruro;530
+40504;Yunguyo de Litoral;Litoral de Atacama; Oruro;419
+40505;Esmeralda;Litoral de Atacama; Oruro;1.017
+40601;Poopó;Poopó; Oruro;6.959
+40602;Pazña;Poopó; Oruro;5.412
+40603;Antequera;Poopó; Oruro;3.295
+40701;Huanuni;Pantaleón Dalence; Oruro;25.625
+40702;Machacamarca;Pantaleón Dalence; Oruro;5.728
+40801;Salinas de Garci Mendoza;Ladislao Cabrera; Oruro;9.776
+40802;Pampa Aullagas;Ladislao Cabrera; Oruro;3.007
+40901;Sabaya;Sabaya; Oruro;6.365
+40902;Coipasa;Sabaya; Oruro;684
+40903;Chipaya;Sabaya; Oruro;1.818
+41001;Toledo;Saucarí; Oruro;6.308
+41101;Eucaliptus;Tomás Barrón; Oruro;5.100
+41201;Santiago de Andamarca;Sud Carangas; Oruro;4.277
+41202;Belén de Andamarca;Sud Carangas; Oruro;1.501
+41301;Totora;San Pedro de Totora; Oruro;4.635
+41401;Santiago de Huari;Sebastián Pagador; Oruro;9.899
+41501;La Rivera;Mejillones; Oruro;381
+41502;Todos Santos;Mejillones; Oruro;535
+41503;Carangas;Mejillones; Oruro;557
+41601;Huayllamarca;Nor Carangas; Oruro;4.835
+50101;Potosí;Tomás Frías; Potosí;269.180
+50102;Tinguipaya;Tomás Frías; Potosí;23.008
+50103;Yocalla;Tomás Frías; Potosí;7.708
+50104;Urmiri;Tomás Frías; Potosí;2.046
+50201;Uncía;Rafael Bustillo; Potosí;23.072
+50202;Chayanta;Rafael Bustillo; Potosí;16.280
+50203;Llallagua;Rafael Bustillo; Potosí;50.922
+50204;Chuquihuta;Rafael Bustillo; Potosí;8.287
+50301;Betanzos;Cornelio Saavedra; Potosí;32.736
+50302;Chaquí;Cornelio Saavedra; Potosí;8.773
+50303;Tacobamba;Cornelio Saavedra; Potosí;9.384
+50401;Colquechaca;Chayanta; Potosí;36.106
+50402;Ravelo;Chayanta; Potosí;18.362
+50403;Pocoata;Chayanta; Potosí;25.531
+50404;Ocurí;Chayanta; Potosí;15.366
+50405;San Pedro de Macha;Chayanta; Potosí;1.000
+50501;San Pedro de Buena Vista;Charcas; Potosí;30.981
+50502;Toro Toro;Charcas; Potosí;12.484
+50601;Cotagaita;Nor Chichas; Potosí;25.826
+50602;Vitichi;Nor Chichas; Potosí;9.151
+50701;Sacaca;Alonso de Ibáñez; Potosí;20.175
+50702;Caripuyo;Alonso de Ibáñez; Potosí;9.128
+50801;Tupiza;Sud Chichas; Potosí;51.903
+50802;Atocha;Sud Chichas; Potosí;12.849
+50901;Colcha K;Nor Lípez; Potosí;13.288
+50902;San Pedro de Quemes;Nor Lípez; Potosí;750
+51001;San Pablo de Lípez;Sud Lípez; Potosí;3.351
+51002;Mojinete;Sud Lípez; Potosí;848
+51003;San Antonio de Esmoruco;Sud Lípez; Potosí;2.188
+51101;Puna;José María Linares; Potosí;19.930
+51102;Caiza D;José María Linares; Potosí;10.570
+51103;Ckochas;José María Linares; Potosí;16.121
+51201;Uyuni;Antonio Quijarro; Potosí;37.700
+51202;Tomave;Antonio Quijarro; Potosí;13.255
+51203;Porco;Antonio Quijarro; Potosí;13.337
+51301;Arampampa;Bernardino Bilbao; Potosí;4.746
+51302;Acasio;Bernardino Bilbao; Potosí;5.618
+51401;Llica;Daniel Campos; Potosí;4.133
+51402;Tahua;Daniel Campos; Potosí;1.710
+51501;Villazón;Modesto Omiste; Potosí;47.287
+51601;San Agustín;Enrique Baldivieso; Potosí;1.997
+60101;Tarija;Cercado; Tarija;272.692
+60201;Padcaya;Aniceto Arce; Tarija;19.148
+60202;Bermejo;Aniceto Arce; Tarija;44.062
+60301;Yacuiba;Gran Chaco; Tarija;109.481
+60302;Caraparí;Gran Chaco; Tarija;16.532
+60303;Villa Montes;Gran Chaco; Tarija;55.704
+60401;Uriondo;José María Avilés; Tarija;16.359
+60402;Yunchará;José María Avilés; Tarija;5.675
+60501;San Lorenzo;Eustaquio Méndez; Tarija;25.904
+60502;El Puente;Eustaquio Méndez; Tarija;11.786
+60601;Entre Ríos;Burdet O'Connor; Tarija;23.871
+70101;Santa Cruz de la Sierra;Andrés Ibáñez; Santa Cruz;1.903.398
+70102;Cotoca;Andrés Ibáñez; Santa Cruz;80.023
+70103;Porongo;Andrés Ibáñez; Santa Cruz;14.496
+70104;La Guardia;Andrés Ibáñez; Santa Cruz;114.318
+70105;El Torno;Andrés Ibáñez; Santa Cruz;71.884
+70201;Warnes;Warnes; Santa Cruz;144.193
+70202;Okinawa Uno;Warnes; Santa Cruz;14.001
+70301;San Ignacio de Velasco;Velasco; Santa Cruz;68.575
+70302;San Miguel de Velasco;Velasco; Santa Cruz;13.060
+70303;San Rafael de Velasco;Velasco; Santa Cruz;6.512
+70401;Buena Vista;Ichilo; Santa Cruz;14.929
+70402;San Carlos;Ichilo; Santa Cruz;24.598
+70403;Villa Yapacaní;Ichilo; Santa Cruz;60.784
+70404;San Juan de Yapacaní;Ichilo; Santa Cruz;10.152
+70501;San José de Chiquitos;Chiquitos; Santa Cruz;32.465
+70502;Pailón;Chiquitos; Santa Cruz;44.248
+70503;Roboré;Chiquitos; Santa Cruz;19.224
+70601;Portachuelo;Sara; Santa Cruz;37.793
+70602;Santa Rosa del Sara;Sara; Santa Cruz;19.182
+70603;Colpa Bélgica;Sara; Santa Cruz;6.947
+70701;Lagunillas;Cordillera; Santa Cruz;6.563
+70702;Charagua;Cordillera; Santa Cruz;36.810
+70703;Cabezas;Cordillera; Santa Cruz;29.843
+70704;Cuevo;Cordillera; Santa Cruz;5.022
+70705;Gutiérrez;Cordillera; Santa Cruz;15.921
+70706;Camiri;Cordillera; Santa Cruz;42.613
+70707;Boyuibe;Cordillera; Santa Cruz;5.324
+70801;Vallegrande;Vallegrande; Santa Cruz;18.510
+70802;El Trigal;Vallegrande; Santa Cruz;1.575
+70803;Moro Moro;Vallegrande; Santa Cruz;2.583
+70804;Postrervalle;Vallegrande; Santa Cruz;2.071
+70805;Pucará;Vallegrande; Santa Cruz;1.747
+70901;Samaipata;Florida; Santa Cruz;10.653
+70902;Pampagrande;Florida; Santa Cruz;9.889
+70903;Mairana;Florida; Santa Cruz;13.006
+70904;Quirusillas;Florida; Santa Cruz;2.158
+71001;Montero;Obispo Santistevan; Santa Cruz;147.078
+71002;General Saavedra;Obispo Santistevan; Santa Cruz;17.556
+71003;Mineros;Obispo Santistevan; Santa Cruz;28.483
+71004;Fernández Alonso;Obispo Santistevan; Santa Cruz;14.742
+71005;San Pedro;Obispo Santistevan; Santa Cruz;17.441
+71101;Concepción;Ñuflo de Chaves; Santa Cruz;26.438
+71102;San Javier;Ñuflo de Chaves; Santa Cruz;17.600
+71103;San Julián;Ñuflo de Chaves; Santa Cruz;55.136
+71104;San Ramón;Ñuflo de Chaves; Santa Cruz;9.803
+71105;San Antonio de Lomerío;Ñuflo de Chaves; Santa Cruz;7.004
+71106;Cuatro Cañadas;Ñuflo de Chaves; Santa Cruz;26.256
+71201;San Matías;Ángel Sandóval; Santa Cruz;17.929
+71301;Comarapa;Caballero; Santa Cruz;19.982
+71302;Saipina;Caballero; Santa Cruz;7.310
+71401;Puerto Suárez;Germán Busch; Santa Cruz;23.113
+71402;Puerto Quijarro;Germán Busch; Santa Cruz;19.328
+71403;El Carmen Rivero Tórrez;Germán Busch; Santa Cruz;7.069
+71501;Ascensión de Guarayos;Guarayos; Santa Cruz;35.743
+71502;Urubichá;Guarayos; Santa Cruz;8.122
+71503;El Puente;Guarayos; Santa Cruz;14.196
+80101;Trinidad;Cercado; Beni;166.262
+80102;San Javier;Cercado; Beni;4.043
+80201;Riberalta;Vaca Díez; Beni;114.869
+80202;Guayaramerín;Vaca Díez; Beni;51.188
+80301;Reyes;General José Ballivián Segurola; Beni;11.811
+80302;San Borja;General José Ballivián Segurola; Beni;42.262
+80303;Santa Rosa;General José Ballivián Segurola; Beni;10.395
+80304;Rurrenabaque;General José Ballivián Segurola; Beni;21.580
+80401;Santa Ana del Yacuma;Yacuma; Beni;18.502
+80402;Exaltación;Yacuma; Beni;4.085
+80501;San Ignacio de Moxos;Moxos; Beni;21.188
+80601;Loreto;Marbán; Beni;2.926
+80602;San Andrés;Marbán; Beni;13.134
+80701;San Joaquín;Mamoré; Beni;6.069
+80702;San Ramón;Mamoré; Beni;5.294
+80703;Puerto Siles;Mamoré; Beni;1.116
+80801;Magdalena;Iténez; Beni;12.180
+80802;Baures;Iténez; Beni;5.365
+80803;Huacaraje;Iténez; Beni;4.069
+90101;Cobija;Nicolás Suárez; Pando;90.277
+90102;Porvenir;Nicolás Suárez; Pando;8.243
+90103;Bolpebra;Nicolás Suárez; Pando;2.574
+90104;Bella Flor;Nicolás Suárez; Pando;4.195
+90201;Puerto Rico;Manuripi; Pando;10.759
+90202;San Pedro;Manuripi; Pando;1.757
+90203;Filadelfia;Manuripi; Pando;8.123
+90301;Puerto Gonzalo Moreno;Madre de Dios; Pando;7.240
+90302;San Lorenzo;Madre de Dios; Pando;9.358
+90303;Sena;Madre de Dios; Pando;8.213
+90401;Santa Rosa del Abuná;Abuná; Pando;2.741
+90402;Ingavi;Abuná; Pando;2.537
+90501;Nueva Esperanza;General Federico Román; Pando;1.840
+90502;Villa Nueva;General Federico Román; Pando;3.177
+90503;Santos Mercado;General Federico Román; Pando;2.693

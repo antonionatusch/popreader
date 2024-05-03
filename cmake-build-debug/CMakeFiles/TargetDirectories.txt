@@ -1,0 +1,3 @@
+C:/Users/antho/CLionProjects/popreader/cmake-build-debug/CMakeFiles/popreader.dir
+C:/Users/antho/CLionProjects/popreader/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/antho/CLionProjects/popreader/cmake-build-debug/CMakeFiles/rebuild_cache.dir
