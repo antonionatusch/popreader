@@ -220,9 +220,9 @@ int main() {
     reader.loadDataFromExcel();
     reader.createIndex();
     std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
-    int code;
-    std::cin >> code;
-    reader.displayMunicipalityInfo(code);
+    int INEcode;
+    std::cin >> INEcode;
+    reader.displayMunicipalityInfo(INEcode);
     reader.mergeSortByPopulation();
     displayRecords(binaryFile);
     reader.PopulationSum(outputFile);
