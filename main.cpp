@@ -107,6 +107,21 @@ public:
         std::cout << "Sumatoria de población por provincia y departamento guardada en: " << outputFile << '\n';
     }
 
+    void displayMunicipalityInfo(int code) {
+        auto it = index.find(code);
+        if (it == index.end()) {
+            std::cout << "No se encontró una municipalidad con el código INE proporcionado.\n";
+        } else {
+            const Municipality& municipality = it->second;
+            std::cout << "Código: " << municipality.code << '\n';
+            std::cout << "Nombre: " << municipality.name << '\n';
+            std::cout << "Provincia: " << municipality.province << '\n';
+            std::cout << "Departamento: " << municipality.department << '\n';
+            std::cout << "Población: " << municipality.population << '\n';
+        }
+    }
+
+
 private:
     std::string excelFile;
     std::string binaryFile;
@@ -126,6 +141,7 @@ private:
 
         outFile.close();
     }
+
 };
 
 int main() {
@@ -136,8 +152,10 @@ int main() {
     PopulationReader reader(excelFile, binaryFile);
     reader.loadDataFromExcel();
     reader.createIndex();
-    std::cout<<"Desplegando la información de la municipalidad con índice: ";
-    // implementación de, dado un índice input, desplegar su información
+    std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
+    int code;
+    std::cin >> code;
+    reader.displayMunicipalityInfo(code);
     reader.mergeSortByPopulation();
     reader.calculatePopulationSumByProvinceAndDepartment(outputFile);
 
