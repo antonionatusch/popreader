@@ -17,7 +17,7 @@ struct Municipality {
 class PopulationReader {
 public:
     PopulationReader(const std::string& excelFile, const std::string& binaryFile)
-        : excelFile(excelFile), binaryFile(binaryFile) {}
+            : excelFile(excelFile), binaryFile(binaryFile) {}
 
     void loadDataFromExcel() {
         std::ifstream file(excelFile);
@@ -82,7 +82,7 @@ public:
         saveDataToBinary();
     }
 
-    void calculatePopulationSumByProvinceAndDepartment(const std::string& outputFile) {
+    void PopulationSum(const std::string& outputFile) {
         std::map<std::string, std::map<std::string, int>> populationSum;
 
         for (const auto& municipality : municipalities) {
@@ -121,10 +121,6 @@ public:
         }
     }
 
-
-
-
-
 private:
     std::string excelFile;
     std::string binaryFile;
@@ -139,13 +135,53 @@ private:
         }
 
         for (const auto& municipality : municipalities) {
-            outFile.write(reinterpret_cast<const char*>(&municipality), sizeof(Municipality));
+            writeMunicipality(outFile, municipality);
         }
 
         outFile.close();
     }
 
+    void writeMunicipality(std::ofstream& outFile, const Municipality& municipality) {
+        // Escribir cada campo en el archivo binario
+        outFile.write(reinterpret_cast<const char*>(&municipality.code), sizeof(municipality.code));
+        writeString(outFile, municipality.name);
+        writeString(outFile, municipality.province);
+        writeString(outFile, municipality.department);
+        outFile.write(reinterpret_cast<const char*>(&municipality.population), sizeof(municipality.population));
+    }
+
+    void writeString(std::ofstream& outFile, const std::string& str) {
+        // Escribir la longitud de la cadena seguida de la cadena en el archivo binario
+        size_t len = str.size();
+        outFile.write(reinterpret_cast<const char*>(&len), sizeof(len));
+        outFile.write(str.data(), len);
+    }
 };
+
+
+
+
+std::string readString(std::ifstream& inFile) {
+    // Leer la longitud de la cadena seguida de la cadena desde el archivo binario
+    size_t len;
+    inFile.read(reinterpret_cast<char*>(&len), sizeof(len));
+    std::string str(len, '\0');
+    inFile.read(&str[0], len);
+    return str;
+}
+bool readMunicipality(std::ifstream& inFile, Municipality& municipality) {
+    // Leer cada campo desde el archivo binario
+    if (!inFile.read(reinterpret_cast<char*>(&municipality.code), sizeof(municipality.code))) {
+        return false;
+    }
+    municipality.name = readString(inFile);
+    municipality.province = readString(inFile);
+    municipality.department = readString(inFile);
+    if (!inFile.read(reinterpret_cast<char*>(&municipality.population), sizeof(municipality.population))) {
+        return false;
+    }
+    return true;
+}
 
 void displayRecords(const std::string& binaryFile) {
     std::ifstream inFile(binaryFile, std::ios::binary);
@@ -158,34 +194,38 @@ void displayRecords(const std::string& binaryFile) {
 
     Municipality municipality;
     int recordCount = 0;
-    while (inFile.read(reinterpret_cast<char*>(&municipality), sizeof(Municipality))) {
+    while (readMunicipality(inFile, municipality)) {
         std::cout << "Código: " << municipality.code << '\n';
         std::cout << "Nombre: " << municipality.name << '\n';
         std::cout << "Provincia: " << municipality.province << '\n';
         std::cout << "Departamento: " << municipality.department << '\n';
         std::cout << "Población: " << municipality.population << "\n\n";
-
+        /*recordCount++;
+       if (recordCount >= 5) {
+           break; // Solo mostrar los primeros 5 registros
+       }*/
     }
 
     inFile.close();
 }
 
 
-int main() {
-    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // Nombre del archivo de Excel
-    std::string binaryFile = "data.bin"; // Nombre del archivo binario
-    std::string outputFile = "population_sum.txt"; // Nombre del archivo de salida
 
+int main() {
+    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // formato csv para mejor legibilidad
+    std::string binaryFile = "data.bin";
+    std::string outputFile = "population_sum.txt";
+    char op;
     PopulationReader reader(excelFile, binaryFile);
     reader.loadDataFromExcel();
     reader.createIndex();
-   /* std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
+    std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
     int code;
     std::cin >> code;
-    reader.displayMunicipalityInfo(code); */
+    reader.displayMunicipalityInfo(code);
     reader.mergeSortByPopulation();
     displayRecords(binaryFile);
-    reader.calculatePopulationSumByProvinceAndDepartment(outputFile);
+    reader.PopulationSum(outputFile);
 
     return 0;
 }
