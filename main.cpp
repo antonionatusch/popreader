@@ -214,18 +214,59 @@ void displayRecords(const std::string& binaryFile) {
 int main() {
     std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // formato csv para mejor legibilidad
     std::string binaryFile = "data.bin";
-    std::string outputFile = "population_sum.txt";
+    //std::string outputFile = "population_sum.txt";
     char op;
     PopulationReader reader(excelFile, binaryFile);
     reader.loadDataFromExcel();
     reader.createIndex();
-    std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
-    int INEcode;
-    std::cin >> INEcode;
-    reader.displayMunicipalityInfo(INEcode);
-    reader.mergeSortByPopulation();
-    displayRecords(binaryFile);
-    reader.PopulationSum(outputFile);
+    std::cerr<<"AVISO: EL ARCHIVO DEBE ESTAR EN FORMATO .CSV, SI NO, NO FUNCIONARÁ. \n";
+    do
+    {
+        std::cout<<"Datos de población INE 2022 \n";
+        std::cout<<"1.- Consultar un registro dado su código de INE \n";
+        std::cout<<"2.- Listar registros según población en orden descendente \n";
+        std::cout<<"3.- Realizar sumatoria y guardarlo en un archivo \n";
+        std::cout<<"4.- Salir \n"; std::cin>>op;
+        switch (op)
+        {
+            case '1':
+            {
+                std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
+                int INEcode;
+                std::cin >> INEcode;
+                reader.displayMunicipalityInfo(INEcode);
+                break;
+            }
+
+            case '2':
+            {
+                reader.mergeSortByPopulation();
+                displayRecords(binaryFile);
+                break;
+            }
+
+            case '3':
+            {
+                std::string outputFile;
+                std::cout<<"Digite el nombre del archivo (separar las palabras con guiones): "; std::cin>>outputFile;
+                reader.PopulationSum(outputFile + ".txt");
+                std::cin.clear();
+                std::cin.ignore(256, '\n');
+            }
+            case '4':
+            {
+                std::cout<<"Gracias. \n";
+                break;
+            }
+            default:
+            {
+                std::cout<<"Escoja alguna de las opciones o digite '4' para salir. \n";
+                break;
+            }
+        }
+
+    }
+    while (op != '4');
 
     return 0;
 }
