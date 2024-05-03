@@ -122,6 +122,9 @@ public:
     }
 
 
+
+
+
 private:
     std::string excelFile;
     std::string binaryFile;
@@ -144,6 +147,30 @@ private:
 
 };
 
+void displayRecords(const std::string& binaryFile) {
+    std::ifstream inFile(binaryFile, std::ios::binary);
+    if (!inFile.is_open()) {
+        std::cerr << "Error: No se pudo abrir el archivo binario para lectura.\n";
+        return;
+    }
+
+    std::cout << "Registros del archivo binario:\n";
+
+    Municipality municipality;
+    int recordCount = 0;
+    while (inFile.read(reinterpret_cast<char*>(&municipality), sizeof(Municipality))) {
+        std::cout << "Código: " << municipality.code << '\n';
+        std::cout << "Nombre: " << municipality.name << '\n';
+        std::cout << "Provincia: " << municipality.province << '\n';
+        std::cout << "Departamento: " << municipality.department << '\n';
+        std::cout << "Población: " << municipality.population << "\n\n";
+
+    }
+
+    inFile.close();
+}
+
+
 int main() {
     std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // Nombre del archivo de Excel
     std::string binaryFile = "data.bin"; // Nombre del archivo binario
@@ -152,11 +179,12 @@ int main() {
     PopulationReader reader(excelFile, binaryFile);
     reader.loadDataFromExcel();
     reader.createIndex();
-    std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
+   /* std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
     int code;
     std::cin >> code;
-    reader.displayMunicipalityInfo(code);
+    reader.displayMunicipalityInfo(code); */
     reader.mergeSortByPopulation();
+    displayRecords(binaryFile);
     reader.calculatePopulationSumByProvinceAndDepartment(outputFile);
 
     return 0;
