@@ -30,10 +30,10 @@ public:
         for (int i = 0; i < 2; ++i) {
             std::getline(file, line);
         }
-        // Ignorar la primera línea que contiene los encabezados
+
         getline(file, line);
 
-        int lineNumber = 2; // Empezar desde la segunda línea (1-indexed)
+        int lineNumber = 2;
         while (getline(file, line)) {
             std::stringstream ss(line);
             std::string token;
@@ -61,7 +61,7 @@ public:
             municipalities.push_back(municipality);
             lineNumber++;
         }
-        // Guardar los datos en el archivo binario
+
         saveDataToBinary();
     }
 
@@ -72,15 +72,67 @@ public:
         }
     }
 
-    void mergeSortByPopulation() {
-        // Ordenar por población en orden descendente
-        std::sort(municipalities.begin(), municipalities.end(), [](const Municipality& a, const Municipality& b) {
-            return a.population > b.population;
-        });
 
-        // Guardar los datos ordenados en el archivo binario
+    void mergeSortByPopulation() {
+        mergeSortByPopulationAux(0, municipalities.size() - 1);
         saveDataToBinary();
     }
+
+    void mergeSortByPopulationAux(int left, int right) {
+        if (left < right) {
+            int mid = left + (right - left) / 2;
+            mergeSortByPopulationAux(left, mid);
+            mergeSortByPopulationAux(mid + 1, right);
+            merge(left, mid, right);
+        }
+    }
+
+    void merge(int left, int mid, int right) {
+        int n1 = mid - left + 1;
+        int n2 = right - mid;
+
+        std::vector<Municipality> leftArray(n1);
+        std::vector<Municipality> rightArray(n2);
+
+
+        for (int i = 0; i < n1; i++) {
+            leftArray[i] = municipalities[left + i];
+        }
+        for (int j = 0; j < n2; j++) {
+            rightArray[j] = municipalities[mid + 1 + j];
+        }
+
+        int i = 0;
+        int j = 0;
+        int k = left;
+
+
+        while (i < n1 && j < n2) {
+            if (leftArray[i].population >= rightArray[j].population) {
+                municipalities[k] = leftArray[i];
+                i++;
+            } else {
+                municipalities[k] = rightArray[j];
+                j++;
+            }
+            k++;
+        }
+
+
+        while (i < n1) {
+            municipalities[k] = leftArray[i];
+            i++;
+            k++;
+        }
+
+
+        while (j < n2) {
+            municipalities[k] = rightArray[j];
+            j++;
+            k++;
+        }
+    }
+
 
     void PopulationSum(const std::string& outputFile) {
         std::map<std::string, std::map<std::string, int>> populationSum;
@@ -142,7 +194,6 @@ private:
     }
 
     void writeMunicipality(std::ofstream& outFile, const Municipality& municipality) {
-        // Escribir cada campo en el archivo binario
         outFile.write(reinterpret_cast<const char*>(&municipality.code), sizeof(municipality.code));
         writeString(outFile, municipality.name);
         writeString(outFile, municipality.province);
@@ -151,7 +202,6 @@ private:
     }
 
     void writeString(std::ofstream& outFile, const std::string& str) {
-        // Escribir la longitud de la cadena seguida de la cadena en el archivo binario
         size_t len = str.size();
         outFile.write(reinterpret_cast<const char*>(&len), sizeof(len));
         outFile.write(str.data(), len);
@@ -193,17 +243,13 @@ void displayRecords(const std::string& binaryFile) {
     std::cout << "Registros del archivo binario:\n";
 
     Municipality municipality;
-    int recordCount = 0;
+
     while (readMunicipality(inFile, municipality)) {
         std::cout << "Código: " << municipality.code << '\n';
         std::cout << "Nombre: " << municipality.name << '\n';
         std::cout << "Provincia: " << municipality.province << '\n';
         std::cout << "Departamento: " << municipality.department << '\n';
         std::cout << "Población: " << municipality.population << "\n\n";
-        /*recordCount++;
-       if (recordCount >= 5) {
-           break; // Solo mostrar los primeros 5 registros
-       }*/
     }
 
     inFile.close();
@@ -214,7 +260,6 @@ void displayRecords(const std::string& binaryFile) {
 int main() {
     std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // formato csv para mejor legibilidad
     std::string binaryFile = "data.bin";
-    //std::string outputFile = "population_sum.txt";
     char op;
     PopulationReader reader(excelFile, binaryFile);
     reader.loadDataFromExcel();
@@ -252,6 +297,7 @@ int main() {
                 reader.PopulationSum(outputFile + ".txt");
                 std::cin.clear();
                 std::cin.ignore(256, '\n');
+                break;
             }
             case '4':
             {
