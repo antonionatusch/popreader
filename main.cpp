@@ -5,7 +5,7 @@
 #include <map>
 #include <algorithm>
 #include <sstream>
-
+#include <limits>
 struct Municipality {
     int code;
     std::string name;
@@ -313,13 +313,23 @@ int main() {
     do
     {
         std::cout<<"Datos de población INE 2022 \n";
-        std::cout<<"1.- Consultar un registro dado su código de INE \n";
-        std::cout<<"2.- Listar registros según población en orden descendente \n";
-        std::cout<<"3.- Realizar sumatoria y guardarlo en un archivo \n";
-        std::cout<<"4.- Salir \n"; std::cin>>op;
+        std::cout<<"a.- Consultar un registro dado su código de INE \n";
+        std::cout<<"b.- Listar registros según población en orden descendente \n";
+        std::cout<<"c.- Realizar sumatoria y guardarlo en un archivo \n";
+        std::cout<<"d.- Salir \n";
+        std::cout<<"Ingrese una opcion: ";
+        std::cin >> op;
+
+        // Validar que el usuario solo haya ingresado un carácter
+        std::cin.ignore(std::numeric_limits<std::streamsize>::max(), '\n');
+        if (std::cin.gcount() > 1) {
+            std::cerr << "Error: Debe ingresar solo un caracter.\n";
+            continue;
+        }
+
         switch (op)
         {
-            case '1':
+            case 'a':
             {
                 std::cout << "Ingrese el código INE de la municipalidad para desplegar su información: ";
                 int INEcode;
@@ -328,23 +338,32 @@ int main() {
                 break;
             }
 
-            case '2':
+            case 'b':
             {
                 reader.mergeSortByPopulation();
                 displayRecords(binaryFile);
                 break;
             }
 
-            case '3':
+            case 'c':
             {
-                std::string outputFile;
-                std::cout<<"Digite el nombre del archivo (separar las palabras con guiones): "; std::cin>>outputFile;
-                reader.PopulationSum(outputFile + ".txt");
+                std::string outputFile, choice;
+                std::cout << "¿Desea especificar la ruta del archivo? (s/n): ";
+                std::cin >> choice;
+                if (tolower(choice[0]) == 's') {
+                    std::cout << "Ingrese la ruta completa del archivo (incluyendo el nombre y la extensión): ";
+                    std::cin >> outputFile;
+                } else {
+                    std::cout << "Ingrese el nombre del archivo (separando las palabras con guiones): ";
+                    std::cin >> outputFile;
+                    outputFile += ".txt"; // Agregar la extensión .txt si no la proporciona el usuario
+                }
+                reader.PopulationSum(outputFile);
                 std::cin.clear();
                 std::cin.ignore(256, '\n');
                 break;
             }
-            case '4':
+            case 'd':
             {
                 std::cout<<"Gracias. \n";
                 break;
@@ -357,7 +376,7 @@ int main() {
         }
 
     }
-    while (op != '4');
+    while (op != 'd');
 
     return 0;
 }
