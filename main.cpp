@@ -303,7 +303,7 @@ void displayRecords(const std::string& binaryFile) {
 
 
 int main() {
-    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine.csv"; // formato csv para mejor legibilidad
+    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-sinpuntos.csv"; // formato csv para mejor legibilidad
     std::string binaryFile = "data.bin";
     char op;
     PopulationReader reader(excelFile, binaryFile);
