@@ -18,7 +18,7 @@ class PopulationReader {
 public:
     PopulationReader(const std::string& excelFile, const std::string& binaryFile)
             : excelFile(excelFile), binaryFile(binaryFile) {}
-
+/*
     void loadDataFromExcel() {
         std::ifstream file(excelFile);
         if (!file) {
@@ -49,6 +49,51 @@ public:
             getline(ss, token, ';'); // Leer población
             // Eliminar cualquier punto en la población
             token.erase(remove(token.begin(), token.end(), '.'), token.end());
+            try {
+                municipality.population = stoi(token);
+            } catch (const std::invalid_argument& e) {
+                std::cerr << "Error al convertir población en la línea " << lineNumber << ": " << e.what() << std::endl;
+                std::cerr << "Línea: " << line << std::endl;
+                file.close();
+                exit(1);
+            }
+
+            municipalities.push_back(municipality);
+            lineNumber++;
+        }
+
+        saveDataToBinary();
+    }
+*/
+
+    void loadDataFromExcel() {
+        std::ifstream file(excelFile);
+        if (!file) {
+            std::cerr << "Error al abrir el archivo CSV." << std::endl;
+            exit(1);
+        }
+
+        // Omitir la primera línea
+        std::string line;
+        std::getline(file, line);
+
+        int lineNumber = 2;
+        while (getline(file, line)) {
+            std::stringstream ss(line);
+            std::string token;
+            Municipality municipality;
+
+            getline(ss, token, ';'); // Leer código INE
+            municipality.code = stoi(token);
+
+            getline(ss, municipality.name, ';'); // Leer nombre
+            getline(ss, municipality.province, ';'); // Leer provincia
+            getline(ss, municipality.department, ';'); // Leer departamento
+
+            getline(ss, token, ';'); // Leer población
+            // Eliminar cualquier punto en la población
+            token.erase(remove(token.begin(), token.end(), '.'), token.end());
+            token.erase(remove(token.begin(), token.end(), ','), token.end());
             try {
                 municipality.population = stoi(token);
             } catch (const std::invalid_argument& e) {
@@ -258,7 +303,7 @@ void displayRecords(const std::string& binaryFile) {
 
 
 int main() {
-    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine-csv.csv"; // formato csv para mejor legibilidad
+    std::string excelFile = "C:\\Users\\antho\\CLionProjects\\popreader\\datos-ine.csv"; // formato csv para mejor legibilidad
     std::string binaryFile = "data.bin";
     char op;
     PopulationReader reader(excelFile, binaryFile);
