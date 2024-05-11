@@ -323,7 +323,7 @@ int main() {
             }
             default:
             {
-                std::cout<<"Escoja alguna de las opciones o digite '4' para salir. \n";
+                std::cout<<"Escoja alguna de las opciones o digite 'd' para salir. \n";
                 break;
             }
         }
